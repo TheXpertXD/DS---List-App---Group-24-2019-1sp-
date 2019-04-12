@@ -22,8 +22,8 @@ package edu.wit.dcsn.comp2000.listapp;
 import java.util.List ;
 
 /**
- * @author 
- * @version
+ * @author Andrew Zemko
+ * @version 1.0
  *
  */
 public class Pile
@@ -37,7 +37,7 @@ public class Pile
 	 */
 	public Pile()
 		{
-		// TODO Auto-generated constructor stub
+		Pile pile = new Pile();
 		
 		}	// end constructor
 

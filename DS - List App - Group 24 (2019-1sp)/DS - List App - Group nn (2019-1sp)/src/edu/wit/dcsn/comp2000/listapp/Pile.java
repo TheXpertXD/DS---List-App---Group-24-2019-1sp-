@@ -19,13 +19,14 @@
 
 package edu.wit.dcsn.comp2000.listapp;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List ;
 
 /**
  * @author Andrew Zemko
- * @version 1.1
- * Added stubs for Pile methods
+ * @version 1.2
+ * Implemented shuffle method
  *
  */
 public class Pile
@@ -41,8 +42,9 @@ public class Pile
 	
 	
 	//Shuffles/Rearranges the list of card objects
-	public void shuffle() {
+	public void shuffle(LinkedList<Card> pile) {
 		
+		Collections.shuffle(pile);
 	} // end shuffle
 	
 	

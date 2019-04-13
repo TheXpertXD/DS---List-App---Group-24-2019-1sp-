@@ -19,6 +19,8 @@
 
 package edu.wit.dcsn.comp2000.listapp;
 
+import java.util.ArrayList;
+
 /**
  * @author Andrew Zemko
  * @version 1.1
@@ -27,6 +29,8 @@ package edu.wit.dcsn.comp2000.listapp;
 public class Deck extends Pile
 	{
 
+	private ArrayList<Card> deck;
+	
 	/**
 	 * 
 	 */

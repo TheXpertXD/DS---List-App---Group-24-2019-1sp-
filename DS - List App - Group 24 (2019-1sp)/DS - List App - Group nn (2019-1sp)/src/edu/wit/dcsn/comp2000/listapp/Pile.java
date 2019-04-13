@@ -19,6 +19,7 @@
 
 package edu.wit.dcsn.comp2000.listapp;
 
+import java.util.LinkedList;
 import java.util.List ;
 
 /**
@@ -29,37 +30,40 @@ import java.util.List ;
  */
 public class Pile
 	{
-	private List<Card> cards ;
-	// instantiate this using either the JCL's ArrayList or LinkedList
 	
+	private LinkedList<Card> cards ;
 
-	//Standard constructor
-	public Pile()
-		{
+	
+	public Pile() {
 		Pile pile = new Pile();
 		
-		}	// end constructor
+	}	// end constructor
+	
 	
 	//Shuffles/Rearranges the list of card objects
 	public void shuffle() {
 		
 	} // end shuffle
 	
+	
 	//Adds a card object to the pile
 	public void add() {
 		
 	} // end add
+	
 	
 	//Removes a card object from the pile
 	public void remove() {
 		
 	} // end remove
 	
+	
 	//Locates a desired card within the pile
 	public Card findCard(Card card) {
 		
 		return null;
 	} // end findCard
+	
 	
 	//Sorts list into fourteen groups: ranks Ace-Joker
 	public Pile groupBy(Rank rank) {
@@ -74,6 +78,7 @@ public class Pile
 		return null;
 	} // end groupBy suits
 
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */

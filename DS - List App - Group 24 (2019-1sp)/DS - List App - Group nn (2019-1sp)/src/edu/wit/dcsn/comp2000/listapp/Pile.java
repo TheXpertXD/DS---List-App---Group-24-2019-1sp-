@@ -23,7 +23,8 @@ import java.util.List ;
 
 /**
  * @author Andrew Zemko
- * @version 1.0
+ * @version 1.1
+ * Added stubs for Pile methods
  *
  */
 public class Pile
@@ -32,15 +33,46 @@ public class Pile
 	// instantiate this using either the JCL's ArrayList or LinkedList
 	
 
-	/**
-	 * 
-	 */
+	//Standard constructor
 	public Pile()
 		{
 		Pile pile = new Pile();
 		
 		}	// end constructor
-
+	
+	//Shuffles/Rearranges the list of card objects
+	public void shuffle() {
+		
+	} // end shuffle
+	
+	//Adds a card object to the pile
+	public void add() {
+		
+	} // end add
+	
+	//Removes a card object from the pile
+	public void remove() {
+		
+	} // end remove
+	
+	//Locates a desired card within the pile
+	public Card findCard(Card card) {
+		
+		return null;
+	} // end findCard
+	
+	//Sorts list into fourteen groups: ranks Ace-Joker
+	public Pile groupBy(Rank rank) {
+		
+		return null;
+	} // end groupBy ranks
+	
+	
+	//Sorts list into four groups: Spades, Clubs, Diamonds, Hearts
+	public Pile groupBy(Suit suit) {
+		
+		return null;
+	} // end groupBy suits
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
@@ -49,7 +81,7 @@ public class Pile
 	public String toString()
 		{
 		return null ;
-		
+
 		}	// end toString()
 
 

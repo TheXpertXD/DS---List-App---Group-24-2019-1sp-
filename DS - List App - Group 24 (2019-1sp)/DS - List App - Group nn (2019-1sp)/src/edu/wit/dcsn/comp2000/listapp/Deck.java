@@ -20,9 +20,9 @@
 package edu.wit.dcsn.comp2000.listapp;
 
 /**
- * @author 
- * @version 
- *
+ * @author Andrew Zemko
+ * @version 1.1
+ *Added deal stub
  */
 public class Deck extends Pile
 	{
@@ -36,7 +36,11 @@ public class Deck extends Pile
 		
 		}	// end constructor
 
-
+	//Distributes cards to the players and returns the remainder for the pile
+	public void deal() {
+		
+	} //end deal()
+	
 	/**
 	 * @param args
 	 */

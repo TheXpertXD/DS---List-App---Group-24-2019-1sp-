@@ -49,14 +49,16 @@ public class Pile
 	
 	
 	//Adds a card object to the pile
-	public void add() {
+	public void add(Card card) {
 		
+		this.add(card);
 	} // end add
 	
 	
 	//Removes a card object from the pile
-	public void remove() {
+	public void remove(Card card) {
 		
+		this.remove(card);
 	} // end remove
 	
 	

@@ -31,12 +31,10 @@ public class Deck extends Pile
 
 	private ArrayList<Card> deck;
 	
-	/**
-	 * 
-	 */
+
 	public Deck()
 		{
-		// TODO Auto-generated constructor stub
+		Deck deck = new Deck();
 		
 		}	// end constructor
 

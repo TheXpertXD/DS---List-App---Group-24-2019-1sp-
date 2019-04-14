@@ -28,15 +28,31 @@ package edu.wit.dcsn.comp2000.listapp;
 public class Card implements Comparable<Card>
 	{
 
-	/**
-	 * 
-	 */
-	public Card()
+
+	public enum Suit{
+        HEART,DIAMOND,SPADE,CLUB,NOTASUIT
+}
+	 public enum Rank{
+	        ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JACK,QUEEN,KING,
+	        NOTAVALUE
+	}
+	 private int rank;
+	 private int suit;
+	 
+	 
+	public Card(int suit, int rank)
 		{
-		// TODO Auto-generated constructor stub
+		this.rank = rank;
+		this.suit = suit;
 		
 		}	// end constructor
+	public int getRank(){
+        return this.rank;
+    }
 
+    public int getSuit(){
+        return this.suit;
+}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
@@ -69,15 +85,15 @@ public class Card implements Comparable<Card>
 	@Override
 	public String toString()
 		{
-		// TODO Auto-generated method stub
-		return null ;
+		 StringBuilder s = new StringBuilder("[");
+	        s.append(this.rank);
+	        s.append(this.suit);
+	        s.append("]");
+	return s.toString();
 		
 		}	// end toString()
 
 
-	/**
-	 * @param args
-	 */
 	public static void main( String[] args )
 		{
 		// TODO Auto-generated method stub

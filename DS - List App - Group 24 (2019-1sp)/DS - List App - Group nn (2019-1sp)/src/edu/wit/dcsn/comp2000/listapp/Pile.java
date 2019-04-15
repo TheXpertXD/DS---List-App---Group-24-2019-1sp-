@@ -20,6 +20,7 @@
 package edu.wit.dcsn.comp2000.listapp;
 
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -28,7 +29,7 @@ import java.util.LinkedList;
  * Implemented most methods including getter & toString
  *
  */
-public class Pile
+public class Pile implements Iterable<Card>
 	{
 	
 	private LinkedList<Card> cards;		//Collection of card objects
@@ -112,5 +113,12 @@ public class Pile
 		// TODO Auto-generated method stub
 
 		}	// end main()
+
+
+	@Override
+	public Iterator<Card> iterator() {
+		// TODO Auto-generated method stub
+		return cards.iterator();
+	}
 
 	}	// end class Pile

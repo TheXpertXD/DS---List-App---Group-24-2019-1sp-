@@ -31,8 +31,6 @@ public class Deck extends Pile
 
 	private Pile cards = new Pile();
 	private int deckCount = 52;
-	private Hand hand1 = new Hand();
-	private Hand hand2 = new Hand();
 
 	public Deck()
 		{

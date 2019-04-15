@@ -28,15 +28,15 @@ package edu.wit.dcsn.comp2000.listapp;
 public class Card implements Comparable<Card>
 	{
 
-	 private Rank rank;
-	 private Suit suit;
+	 Rank rank;
+	 Suit suit;
 	 
 	 
-	public Card(Suit suit, Rank rank)
+	public Card(Rank newRank, Suit newSuit)
 		{
 		
-		this.rank = rank;
-		this.suit = suit;
+		this.rank = newRank;
+		this.suit = newSuit;
 	}	// end constructor
 	
 	
@@ -102,6 +102,7 @@ public class Card implements Comparable<Card>
 		{
 		// TODO Auto-generated method stub
 
+		
 		}	// end main()
 
 	}	// end class Card

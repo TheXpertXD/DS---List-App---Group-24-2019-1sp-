@@ -41,7 +41,7 @@ public class Deck extends Pile
 	public void populateDeck() {
 		for (Suit suit : Suit.values()) {
 		    for (Rank rank : Rank.values()) {
-		      cards.add(new Card(suit,rank));
+		      cards.add(new Card(rank,suit));
 		    }
 		}
 		shuffle(cards.getPile());

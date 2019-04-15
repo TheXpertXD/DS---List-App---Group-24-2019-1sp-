@@ -40,7 +40,7 @@ public enum Rank
     JACK    (   "Jack",         "J",        10,         10,         10,         10 ),
     QUEEN   (   "Queen",        "Q",        10,         10,         10,         10 ),
     KING    (   "King",         "K",        10,         10,         10,         10 ),
-    JOKER   (   "Joker",        "R",        0,          0,          99,         99 )
+    //JOKER   (   "Joker",        "R",        0,          0,          99,         99 )
     ;
 
     private final String displayName;

@@ -41,6 +41,17 @@ public class Game {
 		return validated;
 	}
 	
+	public static boolean checkForEmptyHands( Player[] players) {
+		boolean empty = false;
+		
+		for (int i = 0; i < players.length; i++) {
+			if (players[i].getHand().getCards().getPile().isEmpty()) {
+				empty = true;
+			}
+		}
+		return empty;
+	}
+	
 	public static int calculateWinner(Player[] players) {
 		
 		int winner = 0;
@@ -239,7 +250,7 @@ public class Game {
 						}
 					}
 				}
-				if((players[currentPlayer].getHand().getCards().getPile().isEmpty()) || (deck.getCards().getPile().isEmpty())) {	
+				if((checkForEmptyHands(players)) || (deck.getCards().getPile().isEmpty())) {	
 					winner = true;
 				}
 				printDivider();

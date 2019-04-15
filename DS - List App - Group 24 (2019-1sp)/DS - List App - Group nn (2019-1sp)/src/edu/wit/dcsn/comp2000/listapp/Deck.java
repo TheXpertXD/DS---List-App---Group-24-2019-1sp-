@@ -35,7 +35,7 @@ public class Deck extends Pile
 	public Deck()
 		{
 		Deck deck = new Deck();
-		shuffle(cards.getCards());
+		shuffle(cards.getPile());
 		}	// end constructor
 
 	

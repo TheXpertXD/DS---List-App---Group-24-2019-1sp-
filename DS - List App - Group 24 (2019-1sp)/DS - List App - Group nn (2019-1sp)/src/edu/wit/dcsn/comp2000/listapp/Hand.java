@@ -19,6 +19,9 @@
 
 package edu.wit.dcsn.comp2000.listapp;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author 
@@ -28,19 +31,34 @@ package edu.wit.dcsn.comp2000.listapp;
 public class Hand extends Pile
 	{
 
-	/**
-	 * 
-	 */
+	public static final int CARDS_IN_GAME = 13;
+	private Map<Integer, Card> cards;
+
+	
 	public Hand()
 		{
-		// TODO Auto-generated constructor stub
-		
+		cards = new HashMap<Integer, Card>();
 		}	// end constructor
+	
 
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
+
+	
+
+	@SuppressWarnings("unchecked")
+	public List<Card> removeCards(int number){
+		System.out.println("removing cards with number " + number);
+		Card card = cards.get(number);
+		cards.remove(number);
+		return (List<Card>) card;
+}
+
+	
+	public List<Card> removePairFromHand(int numberToRemove){
+		return removeCards(numberToRemove);
+}
+
+	
 	@Override
 	public String toString()
 		{
@@ -57,5 +75,6 @@ public class Hand extends Pile
 		// TODO Auto-generated method stub
 
 		}	// end main()
+
 
 	}	// end class Hand

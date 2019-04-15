@@ -233,9 +233,8 @@ public class Game {
 				}
 				else {
 					System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGo Fish!");
-					System.out.println("Drew: " + deck.getPile().getFirst());
+					System.out.println("Drew: " + deck.getCards().getPile().getFirst().getRank().getGraphic() + " " + deck.getCards().getPile().getFirst().getSuit().getDisplayName());
 					players[currentPlayer].getHand().addCard(deck.getCards().getPile().remove());
-					deck.getPile().remove();
 					players[currentPlayer].getHand().sort();
 					
 				}

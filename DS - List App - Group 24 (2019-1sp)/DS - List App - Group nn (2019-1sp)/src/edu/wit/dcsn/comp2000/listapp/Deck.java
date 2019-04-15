@@ -32,7 +32,9 @@ public class Deck extends Pile
 
 	public Deck()
 		{
-		
+
+		//Deck deck = new Deck();
+		//shuffle(cards.getPile());
 		}	// end constructor
 
 	
@@ -41,11 +43,12 @@ public class Deck extends Pile
 		    for (Rank rank : Rank.values()) {
 		      cards.add(new Card(suit,rank));
 		    }
-		shuffle(cards.getPile());
 		}
+		shuffle(cards.getPile());
 	}
 
 	public Pile getCards() {
+		
 		return cards;
 	}
 	

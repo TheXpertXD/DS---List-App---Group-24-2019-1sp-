@@ -20,6 +20,7 @@
 package edu.wit.dcsn.comp2000.listapp;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -31,6 +32,7 @@ import java.util.Map;
 public class Hand extends Pile
 	{
 
+	Pile hand = new Pile();
 	public static final int CARDS_IN_GAME = 13;
 	private Map<Integer, Card> cards;
 
@@ -40,6 +42,74 @@ public class Hand extends Pile
 		cards = new HashMap<Integer, Card>();
 		}	// end constructor
 	
+	
+	public void printHand() {
+		for (int i = 0; i < hand.size(); i++) {
+			System.out.print("------------");
+		}
+		System.out.println();
+		for (int i = 0; i < hand.size(); i++) {
+			System.out.print("| " + hand.get(i) + "  ");
+		}
+		System.out.print(" |");
+		System.out.println();
+		for (int i = 0; i < hand.size(); i++) {
+			System.out.print("------------");
+		}
+	}
+	
+	public void addCard(Card newCard) {
+		hand.add(newCard);
+	}
+	
+	public Card removeCard( int index ) {
+		
+		return hand.remove(index);
+	}
+	
+	public Card getCard( int index) {
+		return hand.get(index);
+	}
+	
+	public Pile getCards() {
+		return hand;
+	}
+		
+	public void sort()
+	{
+		Pile tempHand = new Pile();
+		Card[] sortingArray = new Card[hand.size()];
+		Iterator<Card> handIterator = hand.iterator();
+		for(int i = 0; i < hand.size(); i++) {
+			if(handIterator.hasNext()) {
+				sortingArray[i] = handIterator.next();
+			}
+		}
+		for (int i = 0; i < sortingArray.length; i++) {
+		
+			for (int j = i; j < sortingArray.length; j++) {
+			
+				Card temp = sortingArray[i];
+			
+				try { 
+					if ((Integer.parseInt(temp.getGraphic())) > (Integer.parseInt(sortingArray[j].getGraphic()))) {
+						sortingArray[i] = sortingArray[j];
+						sortingArray[j] = temp;
+					}
+				}
+				catch(NumberFormatException e) {
+					if ((temp.getGraphic().equals("A")) || (temp.getGraphic().compareTo(sortingArray[j].getGraphic()) > 0)) {
+						sortingArray[i] = sortingArray[j];
+						sortingArray[j] = temp;
+					}
+				}
+			}	
+		}
+		for(int i = 0; i < sortingArray.length; i++) {
+			tempHand.add(sortingArray[i]);
+		}
+		hand = tempHand;
+	}	// end sort()
 
 	@SuppressWarnings("unchecked")
 	public List<Card> removeCards(int number){

@@ -28,7 +28,7 @@ import java.util.LinkedList;
  * Implemented most methods including getter & toString
  *
  */
-public class Pile
+public class Pile extends LinkedList<Card>
 	{
 	
 	private LinkedList<Card> cards;		//Collection of card objects

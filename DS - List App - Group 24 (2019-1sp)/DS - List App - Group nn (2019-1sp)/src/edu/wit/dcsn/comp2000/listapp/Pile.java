@@ -42,6 +42,12 @@ public class Pile implements Iterable<Card>
 	}	// end constructor
 	
 	
+	public LinkedList<Card> getPile(){
+		
+		return cards;
+	} //end getPile
+	
+	
 	//Returns card on top of pile
 	public Card getTop() {
 		return cards.getFirst();
@@ -62,12 +68,15 @@ public class Pile implements Iterable<Card>
 	
 	public Card get(int index) {
 		return cards.get(index);
-	}
+	} //end 
+	
+	
 	//Removes a card object from the pile
 	public Card remove(int index) {
 		
 		return cards.get(index);
 	} // end remove
+	
 	
 	//Locates a desired card within the pile
 	public Card findCard(Card card) {
@@ -89,9 +98,12 @@ public class Pile implements Iterable<Card>
 		return null;
 	} // end groupBy suits
 
+	
 	public int size() {
+		
 		return cards.size();
-	}
+	} //end size
+	
 	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
@@ -117,8 +129,9 @@ public class Pile implements Iterable<Card>
 
 	@Override
 	public Iterator<Card> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return cards.iterator();
 	}
 
-	}	// end class Pile
+	
+}	// end class Pile

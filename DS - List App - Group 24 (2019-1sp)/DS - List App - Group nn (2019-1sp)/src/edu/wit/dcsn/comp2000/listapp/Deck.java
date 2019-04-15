@@ -41,7 +41,7 @@ public class Deck extends Pile
 		}	// end constructor
 
 	
-	//Distributes cards to the players and returns the remainder for the pile
+	//Distributes cards to the players and gives the remainder to the pile
 	public void deal() {
 		
 		//Adds 5 cards to two hands

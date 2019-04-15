@@ -35,8 +35,9 @@ public class Pile implements Iterable<Card>
 	private LinkedList<Card> cards = new LinkedList<Card>();		//Collection of card objects
 	private int pileCount;				//Count of Cards remaining
 
-	
+
 	public Pile() {
+
 		pileCount = 0;
 	}	// end constructor
 	

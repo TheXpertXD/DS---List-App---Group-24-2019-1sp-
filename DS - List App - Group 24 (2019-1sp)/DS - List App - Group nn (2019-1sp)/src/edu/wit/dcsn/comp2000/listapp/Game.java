@@ -106,6 +106,7 @@ public class Game {
 		//	Initialize the deck
 		Deck deck = new Deck();
 		deck.populateDeck();
+
 		
 		//	Initialize the players array
 		players = new Player[playerCount];

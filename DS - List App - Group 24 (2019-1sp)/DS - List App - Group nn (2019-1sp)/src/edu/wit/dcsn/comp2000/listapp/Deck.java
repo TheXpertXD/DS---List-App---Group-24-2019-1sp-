@@ -19,8 +19,6 @@
 
 package edu.wit.dcsn.comp2000.listapp;
 
-import java.util.ArrayList;
-
 /**
  * @author Andrew Zemko
  * @version 1.3
@@ -34,7 +32,9 @@ public class Deck extends Pile
 
 	public Deck()
 		{
-		
+
+		//Deck deck = new Deck();
+		//shuffle(cards.getPile());
 		}	// end constructor
 
 	
@@ -48,15 +48,18 @@ public class Deck extends Pile
 	}
 
 	public Pile getCards() {
+		
 		return cards;
 	}
+	
+	
 	//Distributes cards to the players and gives the remainder to the pile
-	public void deal() {
+	//public void deal() {
 		
 		//Adds 5 cards to two hands
 		//for (deckCount > 42; deckCount--) {
 			
-		}
+		//}
 		//Adds remainder to the pile
 		//for (deckCount > 0; deckCount--) {
 			//pile.add();

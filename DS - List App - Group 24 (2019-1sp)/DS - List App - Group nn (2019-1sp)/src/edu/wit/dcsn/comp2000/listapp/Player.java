@@ -19,6 +19,8 @@
 
 package edu.wit.dcsn.comp2000.listapp;
 
+import java.util.Arrays;
+import java.util.Iterator;
 
 /**
  * @author 
@@ -28,16 +30,29 @@ package edu.wit.dcsn.comp2000.listapp;
 public class Player
 	{
 	private Hand hand ;
-	
+	int set = 0;
 
 	/**
 	 * 
 	 */
 	public Player()
 		{
-		// TODO Auto-generated constructor stub
+		hand = new Hand();
 		
 		}	// end constructor
+	
+	public Hand getHand() {
+		return hand;
+	}
+	
+	public String cardChoices() {
+		String[] returnArray = new String[hand.getCards().size()];
+		for (int i = 0; i < hand.getCards().size(); i++) {
+			returnArray[i] = hand.getCard(i).getGraphic();
+		}
+		return Arrays.toString(returnArray);
+		
+	}
 
 
 	/**

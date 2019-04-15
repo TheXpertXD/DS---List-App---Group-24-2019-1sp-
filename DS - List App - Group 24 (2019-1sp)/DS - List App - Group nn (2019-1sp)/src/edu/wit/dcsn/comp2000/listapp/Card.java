@@ -34,21 +34,33 @@ public class Card implements Comparable<Card>
 	 
 	public Card(Suit suit, Rank rank)
 		{
+		
 		this.rank = rank;
 		this.suit = suit;
-		
-		}	// end constructor
+	}	// end constructor
+	
+	
+	//returns rank
 	public Rank getRank(){
+		
         return this.rank;
-    }
+    } //end getRank
 
+	
+	//returns suit
     public Suit getSuit(){
+    	
         return this.suit;
     }
+   
     public String getGraphic() {
 		return rank.getGraphic();
 	}
 
+     //end getSuit
+
+
+    
 	/* (non-Javadoc)
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */

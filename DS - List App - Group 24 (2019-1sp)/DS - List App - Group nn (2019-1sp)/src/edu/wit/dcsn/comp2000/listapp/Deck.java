@@ -23,14 +23,16 @@ import java.util.ArrayList;
 
 /**
  * @author Andrew Zemko
- * @version 1.1
- *Added deal stub
+ * @version 1.3
+ *Set up deal() and made instance variables
  */
 public class Deck extends Pile
 	{
 
-	private ArrayList<Card> deck;
-	
+	private Pile pile = new Pile();
+	private int deckCount = 52;
+	private Hand hand1 = new Hand();
+	private Hand hand2 = new Hand();
 
 	public Deck()
 		{
@@ -38,10 +40,20 @@ public class Deck extends Pile
 		
 		}	// end constructor
 
+	
 	//Distributes cards to the players and returns the remainder for the pile
 	public void deal() {
 		
+		//Adds 5 cards to two hands
+		for (deckCount > 42; deckCount--) {
+			
+		}
+		//Adds remainder to the pile
+		for (deckCount > 0; deckCount--) {
+			pile.add();
+		}
 	} //end deal()
+	
 	
 	/**
 	 * @param args

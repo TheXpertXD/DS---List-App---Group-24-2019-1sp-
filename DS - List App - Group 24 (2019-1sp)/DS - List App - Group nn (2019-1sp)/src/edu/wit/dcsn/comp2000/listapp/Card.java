@@ -21,8 +21,8 @@ package edu.wit.dcsn.comp2000.listapp;
 
 
 /**
- * @author 
- * @version
+ * @author Elijah Park
+ * @version 1.0
  *
  */
 public class Card implements Comparable<Card>

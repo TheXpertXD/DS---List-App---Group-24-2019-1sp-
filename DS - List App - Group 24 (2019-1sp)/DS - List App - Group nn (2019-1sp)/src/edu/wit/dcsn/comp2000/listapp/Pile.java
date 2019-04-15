@@ -21,25 +21,30 @@ package edu.wit.dcsn.comp2000.listapp;
 
 import java.util.Collections;
 import java.util.LinkedList;
-import java.util.List ;
 
 /**
  * @author Andrew Zemko
- * @version 1.2
- * Implemented shuffle method
+ * @version 1.3
+ * Implemented most methods including getter & toString
  *
  */
 public class Pile
 	{
 	
-	private LinkedList<Card> cards ;
+	private LinkedList<Card> cards;
+	private int pileCount;
 
 	
 	public Pile() {
 		Pile pile = new Pile();
-		
+		pileCount = 0;
 	}	// end constructor
 	
+	
+	//Returns card on top of pile
+	public Card getTop() {
+		return cards.getFirst();
+	}
 	
 	//Shuffles/Rearranges the list of card objects
 	public void shuffle(LinkedList<Card> pile) {
@@ -69,7 +74,7 @@ public class Pile
 	} // end findCard
 	
 	
-	//Sorts list into fourteen groups: ranks Ace-Joker
+	//Sorts list into fourteen groups: ranks Ace-Joker in ascending order
 	public Pile groupBy(Rank rank) {
 		
 		return null;
@@ -89,8 +94,9 @@ public class Pile
 	@Override
 	public String toString()
 		{
-		return null ;
-
+		
+		String count = ("The pile currently has " + pileCount + " cards");
+		return count;
 		}	// end toString()
 
 

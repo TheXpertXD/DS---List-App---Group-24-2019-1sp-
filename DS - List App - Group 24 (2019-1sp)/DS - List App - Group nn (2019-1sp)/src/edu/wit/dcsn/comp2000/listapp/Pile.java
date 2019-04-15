@@ -31,6 +31,8 @@ import java.util.LinkedList;
 public class Pile
 	{
 	
+	//ROSENBERGGGGGG
+	
 	private LinkedList<Card> cards;
 	private int pileCount;
 
@@ -78,7 +80,7 @@ public class Pile
 	public Pile groupBy(Rank rank) {
 		
 		return null;
-	} // end groupBy ranks xxx
+	} // end groupBy ranks
 	
 	
 	//Sorts list into four groups: Spades, Clubs, Diamonds, Hearts

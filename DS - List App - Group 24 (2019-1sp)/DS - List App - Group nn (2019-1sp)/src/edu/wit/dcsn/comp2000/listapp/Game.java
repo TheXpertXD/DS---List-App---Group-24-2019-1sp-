@@ -208,11 +208,20 @@ public class Game {
 					}
 				players[currentPlayer].getHand().sort();
 				
+				
+				}
+				else {
+					System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGo Fish!");
+					System.out.println("Drew: " + deck.getCards().getPile().getFirst().getRank().getGraphic() + " " + deck.getCards().getPile().getFirst().getSuit().getDisplayName());
+					players[currentPlayer].getHand().addCard(deck.getCards().getPile().remove());
+					players[currentPlayer].getHand().sort();
+					
+				}
 				int count;
 				String checkSetCurrentValue;
 				for(int i = 0; i < players[currentPlayer].getHand().getCards().size(); i++) {
 					count = 0;
-					checkSetCurrentValue = players[currentPlayer].getHand().getCard(i).getGraphic();
+					checkSetCurrentValue = players[currentPlayer].getHand().getCard(i).getRank().getGraphic();
 					for(int j = 0; j < players[currentPlayer].getHand().getCards().size(); j++) {
 						if(checkSetCurrentValue.equals(players[currentPlayer].getHand().getCard(j).getGraphic())) {
 							count++;
@@ -229,14 +238,6 @@ public class Game {
 							}
 						}
 					}
-				}
-				}
-				else {
-					System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGo Fish!");
-					System.out.println("Drew: " + deck.getCards().getPile().getFirst().getRank().getGraphic() + " " + deck.getCards().getPile().getFirst().getSuit().getDisplayName());
-					players[currentPlayer].getHand().addCard(deck.getCards().getPile().remove());
-					players[currentPlayer].getHand().sort();
-					
 				}
 				if((players[currentPlayer].getHand().getCards().getPile().isEmpty()) || (deck.getCards().getPile().isEmpty())) {	
 					winner = true;

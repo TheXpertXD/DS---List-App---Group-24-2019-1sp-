@@ -37,7 +37,7 @@ public class Pile implements Iterable<Card>
 
 	
 	public Pile() {
-		Pile pile = new Pile();
+		//Pile pile = new Pile();
 		pileCount = 0;
 	}	// end constructor
 	
@@ -63,7 +63,7 @@ public class Pile implements Iterable<Card>
 	//Adds a card object to the pile
 	public void add(Card card) {
 		
-		this.add(card);
+		cards.add(card);
 	} // end add
 	
 	public Card get(int index) {

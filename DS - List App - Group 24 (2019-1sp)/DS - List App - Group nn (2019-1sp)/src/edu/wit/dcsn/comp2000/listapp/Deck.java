@@ -34,8 +34,8 @@ public class Deck extends Pile
 
 	public Deck()
 		{
-		Deck deck = new Deck();
-		shuffle(cards.getPile());
+		//Deck deck = new Deck();
+		//shuffle(cards.getPile());
 		}	// end constructor
 
 	
@@ -45,6 +45,7 @@ public class Deck extends Pile
 		      cards.add(new Card(suit,rank));
 		    }
 		}
+		shuffle(cards.getPile());
 	}
 
 	public Pile getCards() {

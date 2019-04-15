@@ -123,10 +123,10 @@ public class Game {
 		}
 		
 		//	Populate goFishPile with contents of Deck
-		Pile goFishPile = new Pile();
-		for (int i = 0; i < deck.size(); i++) {
-			goFishPile.add(deck.getPile().remove());
-		}
+		//Pile goFishPile = deck;
+		//for (int i = 0; i < 52; i++) {
+			//goFishPile.add(deck.getPile().remove());
+		//}
 		
 		//	Begin Game
 		printGameBanner();
@@ -140,7 +140,7 @@ public class Game {
 				
 				//	Print Hands
 				
-				System.out.println("\nRemaining cards in the pile: " + goFishPile.size());
+				System.out.println("\nRemaining cards in the pile: " + deck.getCards().size());
 				for (int i = 0; i < playerCount; i++) {
 					System.out.println("\nPlayer " + i + "'s hand:");
 					players[i].getHand().sort();
@@ -233,13 +233,13 @@ public class Game {
 				}
 				else {
 					System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGo Fish!");
-					System.out.println("Drew: " + goFishPile.getTop());
-					players[currentPlayer].getHand().addCard(goFishPile.getTop());
-					goFishPile.getPile().remove();
+					System.out.println("Drew: " + deck.getPile().getFirst());
+					players[currentPlayer].getHand().addCard(deck.getCards().getPile().remove());
+					deck.getPile().remove();
 					players[currentPlayer].getHand().sort();
 					
 				}
-				if((players[currentPlayer].getHand().getCards().getPile().isEmpty()) || (goFishPile.getPile().isEmpty())) {	
+				if((players[currentPlayer].getHand().getCards().getPile().isEmpty()) || (deck.getCards().getPile().isEmpty())) {	
 					winner = true;
 				}
 				printDivider();

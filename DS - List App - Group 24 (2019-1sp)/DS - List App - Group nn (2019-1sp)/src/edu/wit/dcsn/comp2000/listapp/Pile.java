@@ -59,11 +59,13 @@ public class Pile
 		this.add(card);
 	} // end add
 	
-	
+	public Card get(int index) {
+		return cards.get(index);
+	}
 	//Removes a card object from the pile
-	public void remove(Card card) {
+	public Card remove(int index) {
 		
-		this.remove(card);
+		return cards.get(index);
 	} // end remove
 	
 	//Locates a desired card within the pile

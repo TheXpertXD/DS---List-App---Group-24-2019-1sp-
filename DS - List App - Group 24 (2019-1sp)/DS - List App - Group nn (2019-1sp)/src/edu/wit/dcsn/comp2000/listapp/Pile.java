@@ -85,10 +85,6 @@ public class Pile implements Iterable<Card>
 		return null;
 	} // end findCard
 	
-	public LinkedList<Card> getPile() {
-		return cards;
-	}
-	
 	//Sorts list into fourteen groups: ranks Ace-Joker in ascending order
 	public Pile groupBy(Rank rank) {
 		

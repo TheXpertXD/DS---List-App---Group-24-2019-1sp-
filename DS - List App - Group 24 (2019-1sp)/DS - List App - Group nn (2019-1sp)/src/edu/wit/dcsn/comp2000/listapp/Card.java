@@ -81,8 +81,7 @@ public class Card implements Comparable<Card>
 		{
 		
 		return this.equals(o);
-		
-		}	// end equals()
+	}	// end equals()
 	
 
 	/* (non-Javadoc)
@@ -95,9 +94,8 @@ public class Card implements Comparable<Card>
 	        s.append(this.rank);
 	        s.append(this.suit);
 	        s.append("]");
-	return s.toString();
-		
-		}	// end toString()
+	        return s.toString();
+	}	// end toString()
 
 
 	public static void main( String[] args )

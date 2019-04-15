@@ -22,8 +22,8 @@ package edu.wit.dcsn.comp2000.listapp;
 
 /**
  * @author Elijah Park
- * @version 1.0
- *
+ * @version 1.1
+ * Implemented equals()
  */
 public class Card implements Comparable<Card>
 	{
@@ -73,8 +73,8 @@ public class Card implements Comparable<Card>
 	@Override
 	public boolean equals( Object o )
 		{
-		// TODO Auto-generated method stub
-		return false ;
+		
+		return this.equals(o);
 		
 		}	// end equals()
 	

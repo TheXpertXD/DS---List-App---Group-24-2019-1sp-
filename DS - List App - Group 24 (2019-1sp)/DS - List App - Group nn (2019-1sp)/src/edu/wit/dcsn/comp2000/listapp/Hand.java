@@ -44,12 +44,14 @@ public class Hand extends Pile
 	
 	
 	public void printHand() {
-		for (int i = 0; i < hand.size(); i++) {
+		for (int i = 0; i < hand.getPile().size(); i++) {
 			System.out.print("------------");
 		}
 		System.out.println();
-		for (int i = 0; i < hand.size(); i++) {
-			System.out.print("| " + hand.get(i) + "  ");
+		Iterator<Card> handIterator = hand.getPile().iterator();
+		while (handIterator.hasNext()) {
+			Card output = handIterator.next();
+			System.out.print(" | " + output.getRank().getGraphic() + " " + output.getSuit().getDisplayName());
 		}
 		System.out.print(" |");
 		System.out.println();

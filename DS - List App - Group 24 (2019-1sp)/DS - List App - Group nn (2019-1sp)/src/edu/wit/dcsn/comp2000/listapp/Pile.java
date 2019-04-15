@@ -50,7 +50,7 @@ public class Pile implements Iterable<Card>
 	
 	//Returns card on top of pile
 	public Card getTop() {
-		return cards.getFirst();
+		return cards.remove();
 	}
 	
 	//Shuffles/Rearranges the list of card objects

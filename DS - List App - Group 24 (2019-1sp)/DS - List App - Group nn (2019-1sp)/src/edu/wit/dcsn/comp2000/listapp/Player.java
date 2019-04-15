@@ -37,22 +37,25 @@ public class Player
 	 */
 	public Player()
 		{
-		hand = new Hand();
 		
+		hand = new Hand();
 		}	// end constructor
 	
+	
 	public Hand getHand() {
+		
 		return hand;
 	}
 	
+	
 	public String cardChoices() {
+		
 		String[] returnArray = new String[hand.getCards().size()];
 		for (int i = 0; i < hand.getCards().size(); i++) {
 			returnArray[i] = hand.getCard(i).getGraphic();
 		}
 		return Arrays.toString(returnArray);
-		
-	}
+	} //end cardChoices
 
 
 	/**

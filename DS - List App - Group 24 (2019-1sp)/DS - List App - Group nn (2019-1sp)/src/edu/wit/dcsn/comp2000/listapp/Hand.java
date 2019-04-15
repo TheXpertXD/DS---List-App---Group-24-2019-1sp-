@@ -41,10 +41,6 @@ public class Hand extends Pile
 		}	// end constructor
 	
 
-
-
-	
-
 	@SuppressWarnings("unchecked")
 	public List<Card> removeCards(int number){
 		System.out.println("removing cards with number " + number);
@@ -54,7 +50,8 @@ public class Hand extends Pile
 }
 
 	
-	public List<Card> removePairFromHand(int numberToRemove){
+	public List<Card> removePairFromHand(int numberToRemove) {
+		
 		return removeCards(numberToRemove);
 }
 
@@ -62,8 +59,8 @@ public class Hand extends Pile
 	@Override
 	public String toString()
 		{
-		return null ;
 		
+		return null ;
 		}	// end toString()
 
 

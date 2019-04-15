@@ -29,7 +29,7 @@ import java.util.ArrayList;
 public class Deck extends Pile
 	{
 
-	private Pile pile = new Pile();
+	private Pile cards = new Pile();
 	private int deckCount = 52;
 	private Hand hand1 = new Hand();
 	private Hand hand2 = new Hand();
@@ -41,18 +41,25 @@ public class Deck extends Pile
 		}	// end constructor
 
 	
+	public void populateDeck() {
+		for (Suit suit : Suit.values()) {
+		    for (Rank rank : Rank.values()) {
+		      cards.add(new Card(suit,rank));
+		    }
+		}
+	}
 	//Distributes cards to the players and gives the remainder to the pile
 	public void deal() {
 		
 		//Adds 5 cards to two hands
-		for (deckCount > 42; deckCount--) {
+		//for (deckCount > 42; deckCount--) {
 			
 		}
 		//Adds remainder to the pile
-		for (deckCount > 0; deckCount--) {
-			pile.add();
-		}
-	} //end deal()
+		//for (deckCount > 0; deckCount--) {
+			//pile.add();
+		//}
+//	} //end deal()
 	
 	
 	/**

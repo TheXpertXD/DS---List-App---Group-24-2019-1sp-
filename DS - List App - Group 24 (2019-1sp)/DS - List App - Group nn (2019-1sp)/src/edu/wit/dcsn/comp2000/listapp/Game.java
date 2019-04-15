@@ -93,10 +93,10 @@ public class Game {
 		switch(playerCount) {
 			
 			case 2:
-				cardCount = 7;
+				cardCount = 5;
 				break;
 			case 3:
-				cardCount = 6;
+				cardCount = 5;
 				break;
 			case 4:
 				cardCount = 5;

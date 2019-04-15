@@ -31,8 +31,6 @@ import java.util.LinkedList;
 public class Pile
 	{
 	
-	//ROSENBERGGGGGG   123
-	
 	private LinkedList<Card> cards;
 	private int pileCount;
 

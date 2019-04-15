@@ -37,7 +37,7 @@ public class Pile implements Iterable<Card>
 
 	
 	public Pile() {
-		Pile pile = new Pile();
+		
 		pileCount = 0;
 	}	// end constructor
 	

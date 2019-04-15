@@ -105,8 +105,6 @@ public class Game {
 		
 		//	Initialize the deck
 		Deck deck = new Deck();
-		deck.populateDeck();
-		deck.shuffle();
 		
 		//	Initialize the players array
 		players = new Player[playerCount];

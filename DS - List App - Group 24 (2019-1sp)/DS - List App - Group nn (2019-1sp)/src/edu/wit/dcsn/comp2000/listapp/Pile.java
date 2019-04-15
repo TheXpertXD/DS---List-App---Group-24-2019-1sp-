@@ -64,10 +64,11 @@ public class Pile implements Iterable<Card>
 		return cards.get(index);
 	}
 	//Removes a card object from the pile
-	public Card remove(int index) {
+	//public Card remove(Card card) {
+		//Iterator cardIterator = cards.iterator();
+		//while(cardIterator.hasNext());
 		
-		return cards.get(index);
-	} // end remove
+	//} // end remove
 	
 	//Locates a desired card within the pile
 	public Card findCard(Card card) {
@@ -75,6 +76,9 @@ public class Pile implements Iterable<Card>
 		return null;
 	} // end findCard
 	
+	public LinkedList<Card> getPile() {
+		return cards;
+	}
 	
 	//Sorts list into fourteen groups: ranks Ace-Joker in ascending order
 	public Pile groupBy(Rank rank) {

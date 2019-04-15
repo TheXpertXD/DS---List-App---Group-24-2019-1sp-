@@ -62,10 +62,10 @@ public class Hand extends Pile
 		hand.add(newCard);
 	}
 	
-	public Card removeCard( Card card ) {
+	//public Card removeCard( Card card ) {
 		
-		return hand.remove(card);
-	}
+		//return hand.remove(card);
+//	}
 	
 	public Card getCard( int index) {
 		return hand.get(index);

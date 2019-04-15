@@ -37,7 +37,7 @@ public class Deck extends Pile
 	public Deck()
 		{
 		Deck deck = new Deck();
-		
+		shuffle(cards.getCards());
 		}	// end constructor
 
 	
@@ -47,6 +47,10 @@ public class Deck extends Pile
 		      cards.add(new Card(suit,rank));
 		    }
 		}
+	}
+
+	public Pile getCards() {
+		return cards;
 	}
 	//Distributes cards to the players and gives the remainder to the pile
 	public void deal() {

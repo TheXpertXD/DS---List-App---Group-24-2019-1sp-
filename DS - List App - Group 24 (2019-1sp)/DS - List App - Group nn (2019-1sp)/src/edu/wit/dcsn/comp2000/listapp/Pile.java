@@ -31,8 +31,8 @@ import java.util.LinkedList;
 public class Pile
 	{
 	
-	private LinkedList<Card> cards;
-	private int pileCount;
+	private LinkedList<Card> cards;		//Collection of card objects
+	private int pileCount;				//Count of Cards remaining
 
 	
 	public Pile() {

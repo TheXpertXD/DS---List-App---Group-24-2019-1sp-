@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class Game {
-	
+	#TESTING
 	public static int[] playerSelection(int currentPlayerNum, int totalPlayerCount) {
 		int num = 0;
 		int index = 0;

@@ -52,7 +52,6 @@ public class Card implements Comparable<Card>
 	@Override
 	public int compareTo( Card o )
 		{
-		// TODO Auto-generated method stub
 		return 0 ;
 		
 		}	// end compareTo()

@@ -44,7 +44,10 @@ public class Card implements Comparable<Card>
 
     public Suit getSuit(){
         return this.suit;
-}
+    }
+    public String getGraphic() {
+		return rank.getGraphic();
+	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)

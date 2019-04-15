@@ -28,7 +28,7 @@ import java.util.LinkedList;
  * Implemented most methods including getter & toString
  *
  */
-public class Pile extends LinkedList<Card>
+public class Pile
 	{
 	
 	private LinkedList<Card> cards;
@@ -66,7 +66,6 @@ public class Pile extends LinkedList<Card>
 		this.remove(card);
 	} // end remove
 	
-	
 	//Locates a desired card within the pile
 	public Card findCard(Card card) {
 		
@@ -87,6 +86,9 @@ public class Pile extends LinkedList<Card>
 		return null;
 	} // end groupBy suits
 
+	public int size() {
+		return cards.size();
+	}
 	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()

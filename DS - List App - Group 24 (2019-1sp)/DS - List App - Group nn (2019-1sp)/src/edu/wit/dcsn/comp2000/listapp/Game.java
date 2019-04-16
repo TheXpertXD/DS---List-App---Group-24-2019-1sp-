@@ -45,7 +45,8 @@ public class Game {
 		boolean empty = false;
 		
 		for (int i = 0; i < players.length; i++) {
-			if (players[i].getHand().getPile().isEmpty()) {
+			Iterator<Card> handIterator = players[i].getHand().getCards().iterator();
+			if (!handIterator.hasNext()) {
 				empty = true;
 			}
 		}

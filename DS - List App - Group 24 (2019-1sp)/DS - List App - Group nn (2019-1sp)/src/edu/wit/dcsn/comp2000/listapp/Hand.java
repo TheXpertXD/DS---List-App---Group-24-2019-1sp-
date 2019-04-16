@@ -39,7 +39,7 @@ public class Hand extends Pile
 	
 	public Hand()
 		{
-		cards = new HashMap<Integer, Card>();
+		
 		}	// end constructor
 	
 	

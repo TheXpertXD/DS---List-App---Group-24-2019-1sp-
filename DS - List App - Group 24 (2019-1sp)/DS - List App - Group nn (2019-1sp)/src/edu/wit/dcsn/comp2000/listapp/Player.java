@@ -23,14 +23,14 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 /**
- * @author 
+ * @author Ryan Hale
  * @version
  *
  */
 public class Player
 	{
 	private Hand hand ;
-	int set = 0;
+	private int set = 0;
 
 	/**
 	 * 
@@ -39,15 +39,37 @@ public class Player
 		{
 		
 		hand = new Hand();
+		
 		}	// end constructor
 	
+	/**
+	 * Retrieves the set value
+	 * @return set
+	 */
+	public int getSet() {
+		return set;
+	}
 	
+	/**
+	 * Increments the set value
+	 */
+	public void incSet() {
+		set++;
+	}
+	
+	/**
+	 * Retrieves the hand
+	 * @return hand
+	 */
 	public Hand getHand() {
 		
 		return hand;
 	}
 	
-	
+	/**
+	 * Formats the current player's card choice selection
+	 * @return string of the players hand
+	 */
 	public String cardChoices() {
 		
 		String[] returnArray = new String[hand.getCards().size()];

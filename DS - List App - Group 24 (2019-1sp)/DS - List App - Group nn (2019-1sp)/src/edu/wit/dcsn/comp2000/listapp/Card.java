@@ -19,7 +19,6 @@
 
 package edu.wit.dcsn.comp2000.listapp;
 
-
 /**
  * @author Elijah Park
  * @version 1.1
@@ -28,37 +27,44 @@ package edu.wit.dcsn.comp2000.listapp;
 public class Card implements Comparable<Card>
 	{
 
-	 Rank rank;
-	 Suit suit;
-	 
+	private Rank rank;
+	private Suit suit;
 	 
 	public Card(Rank newRank, Suit newSuit)
-		{
-		
+	{
 		this.rank = newRank;
 		this.suit = newSuit;
 	}	// end constructor
 	
 	
-	//returns rank
+	/**
+	 * Retrieves the rank of the calling Card object
+	 * @return returns rank object
+	 */
 	public Rank getRank(){
 		
         return this.rank;
+        
     } //end getRank
 
 	
-	//returns suit
+	/**
+	 * Retrieves the suit of the calling card object
+	 * @return returns suit object
+	 */
     public Suit getSuit(){
     	
         return this.suit;
     }
    
+    /**
+     * Retrieves the graphic property of the calling card's rank object
+     * @return string of the graphic property
+     */
     public String getGraphic() {
+    	
 		return rank.getGraphic();
 	}
-
-     //end getSuit
-
 
     
 	/* (non-Javadoc)
@@ -66,19 +72,17 @@ public class Card implements Comparable<Card>
 	 */
 	@Override
 	public int compareTo( Card o )
-		{
+	{
 		return 0 ;
 		
-		}	// end compareTo()
-
-
+	}	// end compareTo()
 
 	/* (non-Javadoc)
 	 * @see java.lang.Comparable#equals(java.lang.Object)
 	 */
 	@Override
 	public boolean equals( Object o )
-		{
+	{
 		
 		return this.equals(o);
 	}	// end equals()
@@ -89,7 +93,7 @@ public class Card implements Comparable<Card>
 	 */
 	@Override
 	public String toString()
-		{
+	{
 		 StringBuilder s = new StringBuilder("[");
 	        s.append(this.rank);
 	        s.append(this.suit);
@@ -99,10 +103,9 @@ public class Card implements Comparable<Card>
 
 
 	public static void main( String[] args )
-		{
+	{
 		// TODO Auto-generated method stub
 
-		
-		}	// end main()
+	}	// end main()
 
 	}	// end class Card

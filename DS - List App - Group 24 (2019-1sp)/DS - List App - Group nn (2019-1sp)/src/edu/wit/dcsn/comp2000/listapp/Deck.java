@@ -28,16 +28,15 @@ public class Deck extends Pile
 	{
 
 	private Pile cards = new Pile();
-	private int deckCount = 52;
 
 	public Deck()
 		{
-
-		//Deck deck = new Deck();
-		//shuffle(cards.getPile());
+		
 		}	// end constructor
 
-	
+	/**
+	 * Populates the deck with cards and shuffles
+	 */
 	public void populateDeck() {
 		for (Suit suit : Suit.values()) {
 		    for (Rank rank : Rank.values()) {
@@ -47,25 +46,14 @@ public class Deck extends Pile
 		shuffle(cards.getPile());
 	}
 
+	/**
+	 * Retrieves the cards in the deck
+	 * @return pile object of cards
+	 */
 	public Pile getCards() {
 		
 		return cards;
 	}
-	
-	
-	//Distributes cards to the players and gives the remainder to the pile
-	//public void deal() {
-		
-		//Adds 5 cards to two hands
-		//for (deckCount > 42; deckCount--) {
-			
-		//}
-		//Adds remainder to the pile
-		//for (deckCount > 0; deckCount--) {
-			//pile.add();
-		//}
-//	} //end deal()
-	
 	
 	/**
 	 * @param args

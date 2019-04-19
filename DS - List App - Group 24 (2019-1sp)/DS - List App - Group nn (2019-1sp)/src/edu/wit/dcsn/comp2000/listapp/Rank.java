@@ -78,8 +78,8 @@ public enum Rank
 
     
     /**
-     * 
-     * @return
+     * Retrieves the altPoints
+     * @return altPoints value
      */
     public int getAltPoints()
         {
@@ -89,8 +89,8 @@ public enum Rank
     
     
     /**
-     * 
-     * @return
+     * Retrieves altPriority
+     * @return altPriority value
      */
     public int getAltPriority()
         {
@@ -100,8 +100,8 @@ public enum Rank
     
     
     /**
-     * 
-     * @return
+     * Retrieves displayName
+     * @return string of displayName
      */
     public String getDisplayName()
         {
@@ -111,8 +111,8 @@ public enum Rank
     
     
     /**
-     * 
-     * @return
+     * Retrieves string of graphic
+     * @return string of graphic 
      */
     public String getGraphic()
         {
@@ -122,8 +122,8 @@ public enum Rank
     
     
     /**
-     * 
-     * @return
+     * Retrieves the points value
+     * @return points value
      */
     public int getPoints()
         {
@@ -133,8 +133,8 @@ public enum Rank
     
     
     /**
-     * 
-     * @return
+     * Retrieves the priority value
+     * @return priority value
      */
     public int getPriority()
         {
@@ -144,7 +144,8 @@ public enum Rank
     
     
     /**
-     * 
+     * Retrieves graphic object
+     * @return graphic object
      */
     @Override
     public String toString()

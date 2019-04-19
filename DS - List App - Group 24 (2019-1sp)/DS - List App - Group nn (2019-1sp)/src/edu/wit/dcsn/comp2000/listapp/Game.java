@@ -3,6 +3,11 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Ryan Hale
+ *
+ */
 public class Game {
 	
 	public static int[] playerSelection(int currentPlayerNum, int totalPlayerCount) {
@@ -58,8 +63,8 @@ public class Game {
 		int winner = 0;
 		int setCount = 0;
 		for (int i = 0; i < players.length; i++) {
-			if (players[i].set > setCount) {
-				setCount = players[i].set;
+			if (players[i].getSet() > setCount) {
+				setCount = players[i].getSet();
 				winner = i;
 			}
 		}
@@ -87,7 +92,7 @@ public class Game {
 		int playerCount = 0;
 		boolean validPlayerCount = false;
 		Player[] players;
-		int cardCount = 0;
+		int cardCount = 5;
 		
 		//	Get the playerCount
 		while(!validPlayerCount) {
@@ -100,20 +105,6 @@ public class Game {
 			System.out.println("Between 2 and 4 players please...");
 		}
 		};
-		
-		//	Get the cardCount
-		switch(playerCount) {
-			
-			case 2:
-				cardCount = 5;
-				break;
-			case 3:
-				cardCount = 5;
-				break;
-			case 4:
-				cardCount = 5;
-				break;
-		}
 		
 		//	Initialize the deck
 		Deck deck = new Deck();
@@ -134,12 +125,6 @@ public class Game {
 			}
 		}
 		
-		//	Populate goFishPile with contents of Deck
-		//Pile goFishPile = deck;
-		//for (int i = 0; i < 52; i++) {
-			//goFishPile.add(deck.getPile().remove());
-		//}
-		
 		//	Begin Game
 		printGameBanner();
 		boolean winner = false;
@@ -151,13 +136,12 @@ public class Game {
 			for (int currentPlayer = 0; currentPlayer < playerCount; currentPlayer++) {
 				
 				//	Print Hands
-				
 				System.out.println("\nRemaining cards in the pile: " + deck.getCards().size());
 				for (int i = 0; i < playerCount; i++) {
 					System.out.println("\nPlayer " + i + "'s hand:");
 					players[i].getHand().sort();
 					players[i].getHand().printHand();
-					System.out.println("Sets: " + players[i].set);
+					System.out.println("Sets: " + players[i].getSet());
 				}
 				
 				//	Create int array of valid targets
@@ -243,7 +227,7 @@ public class Game {
 					Iterator<Card> handIterator = players[currentPlayer].getHand().getCards().iterator();
 					if(count == 4) {
 						System.out.println("Set of " + checkSetCurrentValue + " found!");
-						players[currentPlayer].set++;
+						players[currentPlayer].incSet();
 						while(handIterator.hasNext()) {
 							if (handIterator.next().getGraphic().equals(checkSetCurrentValue)) {
 								handIterator.remove();
@@ -256,7 +240,7 @@ public class Game {
 				}
 				printDivider();
 		
-		}
+			}
 		
 		}
 		

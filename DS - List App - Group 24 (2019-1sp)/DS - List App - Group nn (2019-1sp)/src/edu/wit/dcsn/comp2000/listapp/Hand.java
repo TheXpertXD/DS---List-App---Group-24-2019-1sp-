@@ -32,17 +32,17 @@ import java.util.Map;
 public class Hand extends Pile
 	{
 
-	Pile hand = new Pile();
-	public static final int CARDS_IN_GAME = 13;
+	private Pile hand = new Pile();
 	private Map<Integer, Card> cards;
 
-	
 	public Hand()
 		{
 		
 		}	// end constructor
 	
-	
+	/**
+	 * Prints the current hand
+	 */
 	public void printHand() {
 		for (int i = 0; i < hand.getPile().size(); i++) {
 			System.out.print("------------");
@@ -60,23 +60,38 @@ public class Hand extends Pile
 		}
 	}
 	
+	/**
+	 * Adds a card to the hand
+	 * @param newCard
+	 */
 	public void addCard(Card newCard) {
+		
 		hand.add(newCard);
+		
 	}
 	
-	//public Card removeCard( Card card ) {
-		
-		//return hand.remove(card);
-//	}
-	
+	/**
+	 * Retrieves a card from the hand at a specific index
+	 * @param index
+	 * @return the card at the index
+	 */
 	public Card getCard( int index) {
+		
 		return hand.get(index);
 	}
 	
+	/**
+	 * Retrieves the pile of cards from the hand
+	 * @return pile of cards
+	 */
 	public Pile getCards() {
+		
 		return hand;
 	}
 		
+	/**
+	 * Non-Collection-based sort method. ***Testing purposes only***
+	 */
 	public void sort()
 	{
 		Pile tempHand = new Pile();
@@ -113,21 +128,32 @@ public class Hand extends Pile
 		hand = tempHand;
 	}	// end sort()
 
+	/**
+	 * Removes Cards ***Testing only***
+	 * @param number
+	 * @return List
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Card> removeCards(int number){
 		System.out.println("removing cards with number " + number);
 		Card card = cards.get(number);
 		cards.remove(number);
 		return (List<Card>) card;
-}
+	}
 
-	
+	/**
+	 * Removes sets from the Hand ***Testing only***
+	 * @param numberToRemove
+	 * @return List
+	 */
 	public List<Card> removePairFromHand(int numberToRemove) {
 		
 		return removeCards(numberToRemove);
-}
+	}
 
-	
+	/**
+	 * Not implemented
+	 */
 	@Override
 	public String toString()
 		{
@@ -144,6 +170,5 @@ public class Hand extends Pile
 		// TODO Auto-generated method stub
 
 		}	// end main()
-
 
 	}	// end class Hand

@@ -41,64 +41,88 @@ public class Pile implements Iterable<Card>
 		pileCount = 0;
 	}	// end constructor
 	
-	
+	/**
+	 * Retrieves the card pile
+	 * @return LinkedList of cards
+	 */
 	public LinkedList<Card> getPile(){
 		
 		return cards;
 	} //end getPile
 	
 	
-	//Returns card on top of pile
+	/**
+	 * Retrieves the top card
+	 * @return card on top of pile
+	 */
 	public Card getTop() {
 		return cards.remove();
 	}
 	
-	//Shuffles/Rearranges the list of card objects
+	/**
+	 * Shuffles/Rearranges the list of card objects
+	 * @param pile
+	 */
 	public void shuffle(LinkedList<Card> pile) {
 		
 		Collections.shuffle(pile);
 	} // end shuffle
 	
 	
-	//Adds a card object to the pile
+	/**
+	 * Adds a card object to the pile
+	 * @param card
+	 */
 	public void add(Card card) {
 		
 		cards.add(card);
 	} // end add
 	
+	/**
+	 * Retrieves the card at the specified index
+	 * @param index
+	 * @return card
+	 */
 	public Card get(int index) {
 		return cards.get(index);
 	} //end 
 	
 	
-	//Removes a card object from the pile
-	//public Card remove(Card card) {
-		//Iterator cardIterator = cards.iterator();
-		//while(cardIterator.hasNext());
-		
-	//} // end remove
-	
-	
-	//Locates a desired card within the pile
+	/**
+	 * Locates a desired card within the pile ***Testing only***
+	 * @param card
+	 * @return card
+	 */
 	public Card findCard(Card card) {
 		
 		return null;
 	} // end findCard
 	
-	//Sorts list into fourteen groups: ranks Ace-Joker in ascending order
+	/**
+	 * Sorts list into fourteen groups: ranks Ace-Joker in ascending order ***Testing only***
+	 * @param rank
+	 * @return null
+	 */
 	public Pile groupBy(Rank rank) {
 		
 		return null;
 	} // end groupBy ranks
 	
 	
-	//Sorts list into four groups: Spades, Clubs, Diamonds, Hearts
+	/**
+	 * Sorts list into four groups: Spades, Clubs, Diamonds, Hearts ***Testing only***
+	 * @param suit
+	 * @return null
+	 */
 	public Pile groupBy(Suit suit) {
 		
 		return null;
 	} // end groupBy suits
 
-	
+	/**
+	 * Retrieves the size of the card pile
+	 * @return size of pile
+	 */
 	public int size() {
 		
 		return cards.size();
@@ -127,6 +151,9 @@ public class Pile implements Iterable<Card>
 		}	// end main()
 
 
+	/**
+	 * Card iterator
+	 */
 	@Override
 	public Iterator<Card> iterator() {
 

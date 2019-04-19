@@ -69,8 +69,8 @@ public enum Suit implements Comparable<Suit>
 
     
     /**
-     * 
-     * @return
+     * Retrieves the displayName value
+     * @return string of displayName
      */
     public String getDisplayName()
         {
@@ -80,8 +80,8 @@ public enum Suit implements Comparable<Suit>
     
     
     /**
-     * 
-     * @return
+     * Retrieves graphic
+     * @return string of graphic
      */
     public String getGraphic()
         {
@@ -91,8 +91,8 @@ public enum Suit implements Comparable<Suit>
 
  
     /**
-     * 
-     * @return
+     * retrieves color
+     * @return string of color
      */
     public String getColor()
         {
@@ -102,8 +102,8 @@ public enum Suit implements Comparable<Suit>
     
 
     /**
-     * 
-     * @return
+     * Retrieves priority
+     * @return priority
      */
     public int getPriority()
         {
@@ -113,7 +113,8 @@ public enum Suit implements Comparable<Suit>
     
 
     /**
-     * 
+     * Retrieves graphic
+     * @return string of graphic
      */
     @Override
     public String toString()

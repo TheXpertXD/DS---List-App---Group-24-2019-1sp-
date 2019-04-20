@@ -10,6 +10,12 @@ import java.util.Scanner;
  */
 public class Game {
 	
+	/**
+	 * Selects the target player
+	 * @param currentPlayerNum
+	 * @param totalPlayerCount
+	 * @return players array
+	 */
 	public static int[] playerSelection(int currentPlayerNum, int totalPlayerCount) {
 		int num = 0;
 		int index = 0;
@@ -26,6 +32,12 @@ public class Game {
 		return players;
 	}
 	
+	/**
+	 * Validates the target player
+	 * @param target
+	 * @param targetArray
+	 * @return boolean if target player is valid
+	 */
 	public static boolean targetPlayerValidation(int target, int[] targetArray) {
 		boolean validated = false;
 		for(int i = 0; i < targetArray.length; i++) {
@@ -36,6 +48,12 @@ public class Game {
 		return validated;
 	}
 	
+	/**
+	 * Validates the target card
+	 * @param selectedCard
+	 * @param hand
+	 * @return boolean if the target card is valid
+	 */
 	public static boolean targetCardValidation(String selectedCard, Hand hand) {
 		boolean validated = false;
 		for(int i = 0; i < hand.getCards().size(); i++) {
@@ -46,6 +64,11 @@ public class Game {
 		return validated;
 	}
 	
+	/**
+	 * Checks to see if any of the player's hands are empty
+	 * @param players
+	 * @return boolean if any player's hands are empty
+	 */
 	public static boolean checkForEmptyHands( Player[] players) {
 		boolean empty = false;
 		
@@ -58,6 +81,11 @@ public class Game {
 		return empty;
 	}
 	
+	/**
+	 * Checks to see if there is a winner
+	 * @param players
+	 * @return winning player number
+	 */
 	public static int calculateWinner(Player[] players) {
 		
 		int winner = 0;
@@ -71,6 +99,9 @@ public class Game {
 		return winner;
 	}
 	
+	/**
+	 * Game banner
+	 */
 	public static void printGameBanner() {
 		System.out.println("************************************************");
 		System.out.println("*  $$$$$    $$$$    $$$$$$$ $$  $$$$$  $$   $$ *");
@@ -82,6 +113,9 @@ public class Game {
 		System.out.println("***********************************************");
 	}
 	
+	/**
+	 * Formatting tool
+	 */
 	public static void printDivider() {
 		System.out.println("\n**********************************************************************************************************");
 		System.out.println("**********************************************************************************************************");

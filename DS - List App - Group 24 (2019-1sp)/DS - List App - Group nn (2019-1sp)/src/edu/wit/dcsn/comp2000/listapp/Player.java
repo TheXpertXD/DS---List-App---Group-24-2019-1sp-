@@ -85,8 +85,43 @@ public class Player
 	 */
 	public static void main( String[] args )
 		{
-		// TODO Auto-generated method stub
+		
+		getSetTest();
+		incSetTest();
+		getHandTest();
+		cardChoicesTest();
 
 		}	// end main()
+	
+	public static void getSetTest() {
+		System.out.println("Testing getSet()...");
+		
+		Player player = new Player();
+		player.incSet();
+		player.incSet();
+		
+		System.out.print("Player set: " + player.getSet());
+	}
+	
+	public static void incSetTest() {
+		System.out.println("\n\nTesting incSet()...");
+		Player player = new Player();
+		System.out.println("Player set: " + player.getSet());
+		System.out.println("Incrementing set...");
+		player.incSet();
+		System.out.println("Player set: " + player.getSet());
+	}
 
+	public static void getHandTest() {
+		System.out.println("\n\nTesting getHand...");
+		Player player = new Player();
+		System.out.println("Player hand: " + player.getHand());
+		
+	}
+	
+	public static void cardChoicesTest() {
+		System.out.println("\n\nTesting cardChoices()...");
+		Player player = new Player();
+		System.out.println("Player hand: " + player.cardChoices());
+	}
 	}	// end class Player

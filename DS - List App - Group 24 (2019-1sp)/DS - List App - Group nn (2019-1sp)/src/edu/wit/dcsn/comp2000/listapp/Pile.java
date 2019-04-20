@@ -33,12 +33,12 @@ public class Pile implements Iterable<Card>
 	{
 	
 	private LinkedList<Card> cards = new LinkedList<Card>();		//Collection of card objects
-	private int pileCount;				//Count of Cards remaining
+	
 
 
 	public Pile() {
 
-		pileCount = 0;
+		
 	}	// end constructor
 	
 	/**
@@ -136,7 +136,7 @@ public class Pile implements Iterable<Card>
 	public String toString()
 		{
 		
-		String count = ("The pile currently has " + pileCount + " cards");
+		String count = ("The pile currently has " + cards.size() + " cards");
 		return count;
 		}	// end toString()
 

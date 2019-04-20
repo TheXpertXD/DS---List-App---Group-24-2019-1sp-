@@ -33,7 +33,6 @@ public class Hand extends Pile
 	{
 
 	private Pile hand = new Pile();
-	private Map<Integer, Card> cards;
 
 	public Hand()
 		{
@@ -127,29 +126,6 @@ public class Hand extends Pile
 		}
 		hand = tempHand;
 	}	// end sort()
-
-	/**
-	 * Removes Cards ***Testing only***
-	 * @param number
-	 * @return List
-	 */
-	@SuppressWarnings("unchecked")
-	public List<Card> removeCards(int number){
-		System.out.println("removing cards with number " + number);
-		Card card = cards.get(number);
-		cards.remove(number);
-		return (List<Card>) card;
-	}
-
-	/**
-	 * Removes sets from the Hand ***Testing only***
-	 * @param numberToRemove
-	 * @return List
-	 */
-	public List<Card> removePairFromHand(int numberToRemove) {
-		
-		return removeCards(numberToRemove);
-	}
 
 	/**
 	 * Not implemented

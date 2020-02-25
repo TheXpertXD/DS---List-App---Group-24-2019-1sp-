@@ -24,16 +24,16 @@ package edu.wit.dcsn.comp2000.listapp;
  * @version 1.3
  *Set up deal() and made instance variables
  */
+
 public class Deck extends Pile
 	{
 
 	private Pile cards = new Pile();
 
-	public Deck()
-		{
-		
+	public Deck(){
 		}	// end constructor
 
+	
 	/**
 	 * Populates the deck with cards and shuffles
 	 */
@@ -46,22 +46,13 @@ public class Deck extends Pile
 		shuffle(cards.getPile());
 	}
 
+	
 	/**
 	 * Retrieves the cards in the deck
 	 * @return pile object of cards
 	 */
 	public Pile getCards() {
-		
 		return cards;
 	}
 	
-	/**
-	 * @param args
-	 */
-	public static void main( String[] args )
-		{
-		// TODO Auto-generated method stub
-
-		}	// end main()
-
-	}	// end class Deck
+}	// end class Deck

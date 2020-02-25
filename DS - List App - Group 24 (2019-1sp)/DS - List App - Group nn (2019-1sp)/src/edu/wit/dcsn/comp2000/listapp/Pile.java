@@ -29,24 +29,20 @@ import java.util.LinkedList;
  * Implemented most methods including getter & toString
  *
  */
-public class Pile implements Iterable<Card>
-	{
+
+public class Pile implements Iterable<Card> {
 	
 	private LinkedList<Card> cards = new LinkedList<Card>();		//Collection of card objects
 	
-
-
 	public Pile() {
-
-		
 	}	// end constructor
+	
 	
 	/**
 	 * Retrieves the card pile
 	 * @return LinkedList of cards
 	 */
 	public LinkedList<Card> getPile(){
-		
 		return cards;
 	} //end getPile
 	
@@ -59,12 +55,12 @@ public class Pile implements Iterable<Card>
 		return cards.remove();
 	}
 	
+	
 	/**
 	 * Shuffles/Rearranges the list of card objects
 	 * @param pile
 	 */
-	public void shuffle(LinkedList<Card> pile) {
-		
+	public void shuffle(LinkedList<Card> pile) {		
 		Collections.shuffle(pile);
 	} // end shuffle
 	
@@ -73,10 +69,10 @@ public class Pile implements Iterable<Card>
 	 * Adds a card object to the pile
 	 * @param card
 	 */
-	public void add(Card card) {
-		
+	public void add(Card card) {		
 		cards.add(card);
 	} // end add
+	
 	
 	/**
 	 * Retrieves the card at the specified index
@@ -85,7 +81,7 @@ public class Pile implements Iterable<Card>
 	 */
 	public Card get(int index) {
 		return cards.get(index);
-	} //end 
+	} //end getter
 	
 	
 	/**
@@ -93,18 +89,17 @@ public class Pile implements Iterable<Card>
 	 * @param card
 	 * @return card
 	 */
-	public Card findCard(Card card) {
-		
+	public Card findCard(Card card) {		
 		return null;
 	} // end findCard
+	
 	
 	/**
 	 * Sorts list into fourteen groups: ranks Ace-Joker in ascending order ***Testing only***
 	 * @param rank
 	 * @return null
 	 */
-	public Pile groupBy(Rank rank) {
-		
+	public Pile groupBy(Rank rank) {		
 		return null;
 	} // end groupBy ranks
 	
@@ -114,17 +109,16 @@ public class Pile implements Iterable<Card>
 	 * @param suit
 	 * @return null
 	 */
-	public Pile groupBy(Suit suit) {
-		
+	public Pile groupBy(Suit suit) {		
 		return null;
 	} // end groupBy suits
 
+	
 	/**
 	 * Retrieves the size of the card pile
 	 * @return size of pile
 	 */
 	public int size() {
-		
 		return cards.size();
 	} //end size
 	
@@ -133,24 +127,12 @@ public class Pile implements Iterable<Card>
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public String toString()
-		{
-		
+	public String toString() {		
 		String count = ("The pile currently has " + cards.size() + " cards");
 		return count;
 		}	// end toString()
 
-
-	/**
-	 * @param args
-	 */
-	public static void main( String[] args )
-		{
-		// TODO Auto-generated method stub
-
-		}	// end main()
-
-
+	
 	/**
 	 * Card iterator
 	 */

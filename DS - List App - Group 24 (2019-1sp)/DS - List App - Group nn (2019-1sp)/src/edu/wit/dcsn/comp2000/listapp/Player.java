@@ -20,27 +20,23 @@
 package edu.wit.dcsn.comp2000.listapp;
 
 import java.util.Arrays;
-import java.util.Iterator;
 
 /**
  * @author Ryan Hale
  * @version
  *
  */
-public class Player
-	{
+public class Player {
 	private Hand hand ;
 	private int set = 0;
 
 	/**
-	 * 
+	 * Constructor
 	 */
-	public Player()
-		{
-		
+	public Player() {
 		hand = new Hand();
-		
-		}	// end constructor
+	}	// end constructor
+	
 	
 	/**
 	 * Retrieves the set value
@@ -48,50 +44,49 @@ public class Player
 	 */
 	public int getSet() {
 		return set;
-	}
+	}// end getSet()
+	
 	
 	/**
 	 * Increments the set value
 	 */
 	public void incSet() {
 		set++;
-	}
+	}// end incSet()
+	
 	
 	/**
 	 * Retrieves the hand
 	 * @return hand
 	 */
 	public Hand getHand() {
-		
 		return hand;
-	}
+	}// end getHand()
+	
 	
 	/**
 	 * Formats the current player's card choice selection
 	 * @return string of the players hand
 	 */
 	public String cardChoices() {
-		
 		String[] returnArray = new String[hand.getCards().size()];
 		for (int i = 0; i < hand.getCards().size(); i++) {
 			returnArray[i] = hand.getCard(i).getGraphic();
 		}
 		return Arrays.toString(returnArray);
-	} //end cardChoices
+	}//end cardChoices
 
 
 	/**
 	 * @param args
 	 */
-	public static void main( String[] args )
-		{
-		
+	public static void main( String[] args ) {
 		getSetTest();
 		incSetTest();
 		getHandTest();
 		cardChoicesTest();
-
-		}	// end main()
+	}// end main()
+	
 	
 	public static void getSetTest() {
 		System.out.println("Testing getSet()...");
@@ -101,7 +96,8 @@ public class Player
 		player.incSet();
 		
 		System.out.print("Player set: " + player.getSet());
-	}
+	}// end getSetTest()
+	
 	
 	public static void incSetTest() {
 		System.out.println("\n\nTesting incSet()...");
@@ -110,18 +106,20 @@ public class Player
 		System.out.println("Incrementing set...");
 		player.incSet();
 		System.out.println("Player set: " + player.getSet());
-	}
+	}// end incSetTest
 
+	
 	public static void getHandTest() {
 		System.out.println("\n\nTesting getHand...");
 		Player player = new Player();
 		System.out.println("Player hand: " + player.getHand());
-		
-	}
+	}// getHandTest()
+	
 	
 	public static void cardChoicesTest() {
 		System.out.println("\n\nTesting cardChoices()...");
 		Player player = new Player();
 		System.out.println("Player hand: " + player.cardChoices());
-	}
-	}	// end class Player
+	}// end cardChoicesTest()
+	
+}	// end class Player

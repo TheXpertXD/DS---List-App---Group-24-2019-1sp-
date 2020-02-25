@@ -25,12 +25,11 @@ package edu.wit.dcsn.comp2000.listapp;
  *Set up deal() and made instance variables
  */
 
-public class Deck extends Pile
-	{
+public class Deck extends Pile {
 
 	private Pile cards = new Pile();
 
-	public Deck(){
+	public Deck() {
 		}	// end constructor
 
 	

@@ -1,4 +1,5 @@
 package edu.wit.dcsn.comp2000.listapp;
+
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;

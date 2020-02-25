@@ -19,10 +19,7 @@
 
 package edu.wit.dcsn.comp2000.listapp;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author Elijah Park
@@ -30,15 +27,13 @@ import java.util.Map;
  *
  */
 
-public class Hand extends Pile
-	{
-
+public class Hand extends Pile {
+	
 	private Pile hand = new Pile();
 
-	public Hand()
-		{
-		
+	public Hand() {
 		}	// end constructor
+	
 	
 	/**
 	 * Prints the current hand
@@ -58,17 +53,17 @@ public class Hand extends Pile
 		for (int i = 0; i < hand.size(); i++) {
 			System.out.print("------------");
 		}
-	}
+	} // end printHand()
+	
 	
 	/**
 	 * Adds a card to the hand
 	 * @param newCard
 	 */
 	public void addCard(Card newCard) {
-		
 		hand.add(newCard);
-		
-	}
+	} // end addCard()
+	
 	
 	/**
 	 * Retrieves a card from the hand at a specific index
@@ -76,24 +71,23 @@ public class Hand extends Pile
 	 * @return the card at the index
 	 */
 	public Card getCard( int index) {
-		
 		return hand.get(index);
-	}
+	} // end getCard()
+	
 	
 	/**
 	 * Retrieves the pile of cards from the hand
 	 * @return pile of cards
 	 */
 	public Pile getCards() {
-		
 		return hand;
-	}
+	} // end getCards()
 		
+	
 	/**
 	 * Non-Collection-based sort method. ***Testing purposes only***
 	 */
-	public void sort()
-	{
+	public void sort() {
 		Pile tempHand = new Pile();
 		Card[] sortingArray = new Card[hand.size()];
 		Iterator<Card> handIterator = hand.iterator();
@@ -128,24 +122,14 @@ public class Hand extends Pile
 		hand = tempHand;
 	}	// end sort()
 
+	
 	/**
 	 * Not implemented
 	 */
 	@Override
-	public String toString()
-		{
-		
+	public String toString() {
 		return null ;
-		}	// end toString()
+	}	// end toString()
 
 
-	/**
-	 * @param args
-	 */
-	public static void main( String[] args )
-		{
-		// TODO Auto-generated method stub
-
-		}	// end main()
-
-	}	// end class Hand
+}	// end class Hand

@@ -24,14 +24,12 @@ package edu.wit.dcsn.comp2000.listapp;
  * @version 1.1
  * Implemented equals()
  */
-public class Card implements Comparable<Card>
-	{
-
+public class Card implements Comparable<Card> {
+	
 	private Rank rank;
 	private Suit suit;
 	 
-	public Card(Rank newRank, Suit newSuit)
-	{
+	public Card(Rank newRank, Suit newSuit) {
 		this.rank = newRank;
 		this.suit = newSuit;
 	}	// end constructor
@@ -41,49 +39,42 @@ public class Card implements Comparable<Card>
 	 * Retrieves the rank of the calling Card object
 	 * @return returns rank object
 	 */
-	public Rank getRank(){
-		
+	public Rank getRank() {
         return this.rank;
-        
-    } //end getRank
+    } //end getRank()
 
 	
 	/**
 	 * Retrieves the suit of the calling card object
 	 * @return returns suit object
 	 */
-    public Suit getSuit(){
-    	
+    public Suit getSuit() {
         return this.suit;
-    }
+    } // end getSuit()
    
     /**
      * Retrieves the graphic property of the calling card's rank object
      * @return string of the graphic property
      */
-    public String getGraphic() {
-    	
+    public String getGraphic() {	
 		return rank.getGraphic();
-	}
+	} // end getGraphic()
 
     
 	/* (non-Javadoc)
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
 	@Override
-	public int compareTo( Card o )
-	{
-		return 0 ;
-		
+	public int compareTo( Card o ) {
+		return 0 ;	
 	}	// end compareTo()
 
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Comparable#equals(java.lang.Object)
 	 */
 	@Override
-	public boolean equals( Object o )
-	{
-		
+	public boolean equals( Object o ) {
 		return this.equals(o);
 	}	// end equals()
 	
@@ -100,12 +91,5 @@ public class Card implements Comparable<Card>
 	        s.append("]");
 	        return s.toString();
 	}	// end toString()
-
-
-	public static void main( String[] args )
-	{
-		// TODO Auto-generated method stub
-
-	}	// end main()
 
 	}	// end class Card

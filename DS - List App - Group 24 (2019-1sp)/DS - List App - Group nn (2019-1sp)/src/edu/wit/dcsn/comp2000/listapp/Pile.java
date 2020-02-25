@@ -138,9 +138,7 @@ public class Pile implements Iterable<Card> {
 	 */
 	@Override
 	public Iterator<Card> iterator() {
-
 		return cards.iterator();
-	}
+	} // end iterator()
 
-	
 }	// end class Pile
